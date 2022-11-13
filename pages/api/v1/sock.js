@@ -9,7 +9,9 @@ const SocketHandler = (req, res) => {
     res.socket.server.io = io
 
     io.on('connection', socket => {
-      
+      socket.on('tst', (msg) =>{
+        console.log(msg)
+      })
     })
   }
   res.end()
